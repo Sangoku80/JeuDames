@@ -38,7 +38,7 @@ public class Board extends Sprite {
             for(int i = 0; i < 10; i++)
             {
                 String color = colors[(j + i) % 2];
-                Rectangle rect = new Rectangle(384 + j * (int) dimension_x, 59 + i * (int) dimension_y, (int) dimension_y, (int) dimension_x);
+                Rectangle rect = new Rectangle((int) (385 + i * 72.5f), (int) (58 + j * 72.5f), (int) 72.4f, (int) 72.4f);
                 board.put(letters[j] + (i + 1) + "_" + color, rect);
             }
 
@@ -104,11 +104,15 @@ public class Board extends Sprite {
 
     public void start_disposition_black()
     {
-        String[] startDispositionPiecesBlack = {
+ /*       String[] startDispositionPiecesBlack = {
                 "b1_black", "d1_black", "f1_black", "h1_black", "j1_black",
                 "a2_black", "c2_black", "e2_black", "g2_black", "i2_black",
                 "b3_black", "d3_black", "f3_black", "h3_black", "j3_black",
                 "a4_black", "c4_black", "e4_black", "g4_black", "i4_black"
+        };*/
+
+        String[] startDispositionPiecesBlack = {
+                "a1_white"
         };
 
         for(String str : startDispositionPiecesBlack)

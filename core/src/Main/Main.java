@@ -59,12 +59,7 @@ public class Main extends ApplicationAdapter {
 
 		// dessin du boardCollide
 		shapeRenderer.setColor(1, 0,0,0);
-
-		for(int i = 0; i < 10; i++)
-		{
-			for(int j = 0)
-			shapeRenderer.rect(385f + i * 72.5f, 58, 72.4f, 72.4f);
-		}
+		board.drawCollideBoard(shapeRenderer);
 
 		// Terminez le rendu des formes
 		shapeRenderer.end();
