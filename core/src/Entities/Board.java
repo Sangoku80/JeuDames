@@ -19,8 +19,6 @@ public class Board extends Sprite {
     private final String[] colors = {"white", "black"};
     private static final Texture damier = new Texture("damier.png");
     private final int columns_lines = 10;
-    float dimension_x = (float) 725 / columns_lines;
-    float dimension_y = (float) 725 / columns_lines;
 
     public Board()
     {
@@ -52,11 +50,6 @@ public class Board extends Sprite {
         {
             shapeRenderer.rect((float) element.getValue().getX(), (float) element.getValue().getY(), (float) element.getValue().getWidth(), (float) element.getValue().getHeight());
         }
-    }
-
-    public void drawRectCollide(ShapeRenderer shapeRenderer, Rectangle rect)
-    {
-        shapeRenderer.rect(rect.x, rect.y, rect.width, rect.height);
     }
 
     public void getBoardValid()
@@ -104,12 +97,6 @@ public class Board extends Sprite {
 
     public void start_disposition_black()
     {
- /*       String[] startDispositionPiecesBlack = {
-                "b1_black", "d1_black", "f1_black", "h1_black", "j1_black",
-                "a2_black", "c2_black", "e2_black", "g2_black", "i2_black",
-                "b3_black", "d3_black", "f3_black", "h3_black", "j3_black",
-                "a4_black", "c4_black", "e4_black", "g4_black", "i4_black"
-        };*/
 
         String[] startDispositionPiecesBlack = {
                 "a1_white"
