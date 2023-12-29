@@ -2,7 +2,6 @@ package Entities;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 import java.util.Objects;
 
@@ -14,9 +13,20 @@ public class Piece extends Sprite {
     public Piece(int x, int y, String color)
     {
         super(getTexture(color));
-        //this.setScale(0.8f, 0.8f);
-        this.setX((float) x);
-        this.setY((float) y);
+
+        // redimensionner l'image
+        if(this.getTexture() == pion_noir)
+        {
+            this.setPosition(x - 0.5f, y);
+            this.setOrigin(0, 0);
+            this.setScale(0.61f, 0.61f);
+        }
+        else
+        {
+            this.setPosition(x - 2, y + 2);
+            this.setOrigin(0, 0);
+            this.setScale(0.33f, 0.33f);
+        }
 
     }
 

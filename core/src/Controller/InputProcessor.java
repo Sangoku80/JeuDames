@@ -31,7 +31,6 @@ public class InputProcessor implements com.badlogic.gdx.InputProcessor {
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        System.out.println(screenX + " " + screenY);
         System.out.println(board.touchBoard(screenX, screenY));
         return false;
     }

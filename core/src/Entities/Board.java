@@ -3,7 +3,6 @@ package Entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -16,9 +15,8 @@ public class Board extends Sprite {
     public HashMap<String, Rectangle> board_valid = new HashMap<>();
     private final String[] letters = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
     public ArrayList<Piece> pieces = new ArrayList<>();
-    private final String[] colors = {"white", "black"};
+    private final String[] colors = {"black", "white"};
     private static final Texture damier = new Texture("damier.png");
-    private final int columns_lines = 10;
 
     public Board()
     {
@@ -42,14 +40,6 @@ public class Board extends Sprite {
 
         }
 
-    }
-
-    public void drawCollideBoard(ShapeRenderer shapeRenderer)
-    {
-        for(Map.Entry<String, Rectangle> element : board.entrySet())
-        {
-            shapeRenderer.rect((float) element.getValue().getX(), (float) element.getValue().getY(), (float) element.getValue().getWidth(), (float) element.getValue().getHeight());
-        }
     }
 
     public void getBoardValid()
@@ -82,10 +72,26 @@ public class Board extends Sprite {
     public void start_disposition_white()
     {
         String[] startDispositionPiecesWhite = {
-                "a10_black", "c10_black", "e10_black", "g10_black", "i10_black",
-                "b9_black", "d9_black", "f9_black", "h9_black", "j9_black",
-                "a8_black", "c8_black", "e8_black", "g8_black", "i8_black",
-                "b7_black", "d7_black", "f7_black", "h7_black", "j7_black"
+                "g1_black",
+                "g3_black",
+                "g5_black",
+                "g7_black",
+                "g9_black",
+                "h2_black",
+                "h4_black",
+                "h6_black",
+                "h8_black",
+                "h10_black",
+                "i1_black",
+                "i3_black",
+                "i5_black",
+                "i7_black",
+                "i9_black",
+                "j2_black",
+                "j4_black",
+                "j6_black",
+                "j8_black",
+                "j10_black"
         };
 
         for(String str : startDispositionPiecesWhite)
@@ -99,7 +105,26 @@ public class Board extends Sprite {
     {
 
         String[] startDispositionPiecesBlack = {
-                "a1_white"
+                "a1_black",
+                "a3_black",
+                "a5_black",
+                "a7_black",
+                "a9_black",
+                "b2_black",
+                "b4_black",
+                "b6_black",
+                "b8_black",
+                "b10_black",
+                "c1_black",
+                "c3_black",
+                "c5_black",
+                "c7_black",
+                "c9_black",
+                "d2_black",
+                "d4_black",
+                "d6_black",
+                "d8_black",
+                "d10_black"
         };
 
         for(String str : startDispositionPiecesBlack)
