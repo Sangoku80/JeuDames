@@ -20,7 +20,7 @@ public class Board extends Sprite {
 
     public Board()
     {
-        // redimensionner l'image
+        // redimensionner l'image TT
         super(damier);
         this.setPosition(0, 0);
         this.setOrigin(0, 0);
